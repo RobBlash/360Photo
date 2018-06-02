@@ -1,0 +1,76 @@
+/*Shared Layout*/
+
+.block {
+  display: block;
+}
+
+.block-inline {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+  /*border: 2px solid blue*/
+}
+
+.flex-inline {
+  display: inline-flex;
+  /*border: 2px solid green*/
+}
+
+.column {
+  flex-direction: column;
+  /*border: 1px solid red;*/
+}
+
+.jc-ctr {
+  justify-content: center;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.items-ctr {
+  align-items: center;
+}
+
+
+
+/*Shared Text*/
+.bold {
+  font-weight: bold;
+}
+
+.em {
+  font-style: italic;
+}
+
+/*Header*/
+
+
+/*Header Responsive*/
+
+
+/*Main Content*/
+
+
+/*Main Content Responsive*/
+
+
+/*Footer*/
+
+
+/*Footer Responsive*/
