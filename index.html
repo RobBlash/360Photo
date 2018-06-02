@@ -7,20 +7,17 @@
     <link rel="stylesheet" href="./resources/pannellum/pannellum.css"/>
     <script type="text/javascript" src="./resources/pannellum/pannellum.js"></script>
     <title>Testing 360</title>
-    <style>
-      #panorama {
-          width: 100%;
-          height: 100%;
-      }
-    </style>
+
   </head>
   <body>
-    <div id="panorama"></div>
-
-    <script>
+    <div class="">
+          <div id="panorama"></div>
+    </div>
+<script>
     pannellum.viewer('panorama', {
         "type": "equirectangular",
-        "panorama": "https://pannellum.org/images/alma.jpg"
+        <!--"panorama": "https://pannellum.org/images/alma.jpg"-->
+        "panorama": "./resources/images/PANO_20180602_113949.jpg"
     });
     </script>
 
