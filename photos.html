@@ -11,8 +11,19 @@
   </head>
   <body>
     <div class="container">
-      <iframe width="900" height="600" allowfullscreen style="border-style:none;" src="./resources/pannellum/pannellum.htm?panorama=../images/PANO_20180604_102437.jpg&amp;autoLoad=true&amp;config=nocompass.json&amp;title=Panoramic%20Image%20Example&amp;author=Robert%20Blash"></iframe>
+     
     </div>
-
+    <script>
+      var mytext = getUrlParam('text','Empty');
+    </script>
+    <script>
+      function getUrlParam(parameter, defaultvalue){
+        var urlparameter = defaultvalue;
+          if(window.location.href.indexOf(parameter) > -1){
+              urlparameter = getUrlVars()[parameter];
+              }
+      return urlparameter;
+      }
+    </script>
   </body>
 </html>
