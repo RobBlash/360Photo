@@ -16,18 +16,26 @@
          
 
     <script>
-      var mytext = getUrlParam('text','Empty');
-      
-      var $heading = $('<h1>' + mytext + '</h1>');
-      $('div').append($heading);
-      
-      function getUrlParam(parameter, defaultvalue){
-        var urlparameter = defaultvalue;
+      $(document).ready(function() {
+
+        function getUrlParam(parameter, defaultvalue){
+          var urlparameter = defaultvalue;
           if(window.location.href.indexOf(parameter) > -1){
               urlparameter = getUrlVars()[parameter];
               }
-      return urlparameter;
-      }
+        return urlparameter;
+}
+       
+        
+        var myvar = getUrlParam('text','Empty');
+        
+        
+        
+        var $heading = $('<h1>' + myvar + '</h1>');
+        $('div').append($heading);
+      
+      });
+
     </script>
 
   </body>
