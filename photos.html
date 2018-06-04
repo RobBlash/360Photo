@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="container">
-      <p id="target">This is the element I am targeting.</p>
+      <iframe id="panoframe" width="900" height="600" allowfullscreen="" style="border-style:none;"></iframe>
     </div>
     
     <script
@@ -19,9 +19,8 @@
     
     <script>
     $(document).ready(function() {
-      var myVar = "bold";
-      $("#target").attr("class",myVar);
-      $('div').append($heading);
+      var myVar = "./resources/pannellum/pannellum.htm?panorama=../images/PANO_20180604_102437.jpg&amp;autoLoad=true&amp;config=nocompass.json&amp;title=Panoramic%20Image%20Example&amp;author=Robert%20Blash";
+      $("#panoframe").attr("src",myVar);
       
       });
     </script>
