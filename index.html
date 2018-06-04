@@ -11,8 +11,44 @@
   </head>
   <body>
     <div class="container">
-      <iframe width="900" height="600" allowfullscreen style="border-style:none;" src="./resources/pannellum/pannellum.htm?panorama=../images/PANO_20180604_102437.jpg&amp;autoLoad=true&amp;config=nocompass.json&amp;title=Panoramic%20Image%20Example&amp;author=Robert%20Blash"></iframe>
+      <iframe id="panoframe" width="900" height="600" allowfullscreen="" style="border-style:none;"></iframe>
     </div>
-
+    
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <script>
+    $(document).ready(function() {
+              function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+                vars[key] = value;
+            });
+            return vars;
+        }        
+        
+        function getUrlParam(parameter, defaultvalue){
+          var urlparameter = defaultvalue;
+          if(window.location.href.indexOf(parameter) > -1){
+            urlparameter = getUrlVars()[parameter];
+            }
+          return urlparameter;
+        }
+        
+      <!--var myvar = getUrlParam('text','Empty');-->
+      
+      var basePath = "./resources/pannellum/pannellum.htm?panorama=../images/"
+      var imgName = getUrlParam('image','Empty')
+      var autoLoad = "&autoLoad=true"
+      var configs = "&config=nocompass.json"
+      var title = getUrlParam('title','Empty')
+      var author = "&author=Robert Blash"
+      
+      var srcStr = basePath + imgName + autoLoad + configs + title + author
+      $("#panoframe").attr("src",srcStr);
+      
+      });
+    </script>
+ 
   </body>
 </html>
