@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" >
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" >
+    <link rel="stylesheet" href="./resources/pannellum/pannellum.css"/>
+    <script type="text/javascript" src="./resources/pannellum/pannellum.js"></script>
+    <title>Testing 360</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <p>The params are</p>
+    </div>
+         
+
+    <script>
+      var mytext = getUrlParam('text','Empty');
+      
+      var $heading = $('<h1>' + mytext + '</h1>');
+      $('div').append($heading);
+      
+      function getUrlParam(parameter, defaultvalue){
+        var urlparameter = defaultvalue;
+          if(window.location.href.indexOf(parameter) > -1){
+              urlparameter = getUrlVars()[parameter];
+              }
+      return urlparameter;
+      }
+    </script>
+
+  </body>
+</html>
