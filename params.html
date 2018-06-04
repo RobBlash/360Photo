@@ -15,26 +15,27 @@
     </div>
          
     <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-    </script>
+  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script>
 
       $(document).ready(function() {
-
-
-        function getUrlParam(parameter, defaultvalue){
-          var urlparameter = defaultvalue;
-          if(window.location.href.indexOf(parameter) > -1){
-              urlparameter = getUrlVars()[parameter];
-              }
-        return urlparameter;
-}
-               
-      var myvar = getUrlParam('text','Empty');
-  
-      var $heading = $('<h1>' + myvar + '</h1>');
-      $('div').append($heading);
+        
+        <!--var myvar = getUrlParam('text','Empty');-->
+          
+        var myvar = "This is where the params are shown";
+        
+        var $heading = $('<h1>' + myvar + '</h1>');
+        $('div').append($heading);
       
+        function getUrlParam(parameter, defaultvalue){
+            var urlparameter = defaultvalue;
+            if(window.location.href.indexOf(parameter) > -1){
+                urlparameter = getUrlVars()[parameter];
+                }
+          return urlparameter;
+        }
+               
+    
       });
 
     </script>
