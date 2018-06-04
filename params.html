@@ -16,9 +16,10 @@
          
 
     <script>
+ <!--  
       $(document).ready(function() {
 
-       <!--  
+
         function getUrlParam(parameter, defaultvalue){
           var urlparameter = defaultvalue;
           if(window.location.href.indexOf(parameter) > -1){
@@ -32,8 +33,10 @@
         
         -->
         
-        var $heading = $('<h1>' + "the append is working" + '</h1>');
-        $('div').append($heading);
+    $(document).ready(function() {
+      var myvar = "Test text";
+      var $heading = $('<h1>' + myvar + '</h1>');
+      $('div').append($heading);
       
       });
 
