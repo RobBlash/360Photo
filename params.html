@@ -19,21 +19,22 @@
     <script>
 
       $(document).ready(function() {
+        function getUrlParam(parameter, defaultvalue){
+          var urlparameter = defaultvalue;
+          if(window.location.href.indexOf(parameter) > -1){
+            urlparameter = getUrlVars()[parameter];
+            }
+          return urlparameter;
+        }
         
-        <!--var myvar = getUrlParam('text','Empty');-->
+        var myvar = getUrlParam('text','Empty');
           
-        var myvar = "This is where the params are shown";
+        <!--var myvar = "This is where the params are shown";-->
         
         var $heading = $('<h1>' + myvar + '</h1>');
         $('div').append($heading);
       
-        function getUrlParam(parameter, defaultvalue){
-            var urlparameter = defaultvalue;
-            if(window.location.href.indexOf(parameter) > -1){
-                urlparameter = getUrlVars()[parameter];
-                }
-          return urlparameter;
-        }
+
                
     
       });
