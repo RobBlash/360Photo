@@ -41,10 +41,10 @@
       var imgName = getUrlParam('image','Empty')
       var autoLoad = "&autoLoad=true"
       var configs = "&config=nocompass.json"
-      var title = getUrlParam('title','Empty')
+      var title = getUrlParam('title','')
       var author = "&author=Robert Blash"
       
-      var srcStr = basePath + imgName + autoLoad + configs + title + author
+      var srcStr = basePath + imgName + autoLoad + configs + "&title=" + title + author
       $("#panoframe").attr("src",srcStr);
       
       });
