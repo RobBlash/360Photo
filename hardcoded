@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" >
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" >
+    <link rel="stylesheet" href="./resources/pannellum/pannellum.css"/>
+    <script type="text/javascript" src="./resources/pannellum/pannellum.js"></script>
+    <title>Testing 360</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <iframe width="900" height="600" allowfullscreen style="border-style:none;" src="./resources/pannellum/pannellum.htm?panorama=../images/PANO_20180604_102437.jpg&amp;autoLoad=true&amp;config=nocompass.json&amp;title=Panoramic%20Image%20Example&amp;author=Robert%20Blash"></iframe>
+    </div>
+
+  </body>
+</html>
