@@ -19,8 +19,14 @@
     
     <script>
     $(document).ready(function() {
-      var myVar = "./resources/pannellum/pannellum.htm?panorama=../images/PANO_20180604_102437.jpg&autoLoad=true&config=nocompass.json&title=Panoramic%20Image%20Example&author=Robert%20Blash";
-      $("#panoframe").attr("src",myVar);
+      var basePath = "./resources/pannellum/pannellum.htm?panorama=../images/"
+      var imgName = "PANO_20180604_102437.jpg"
+      var autoLoad = "&amp;autoLoad=true"
+      var configs = "&amp;config=nocompass.json"
+      var title = "&amp;title=Panoramic%20Image%20Example"
+      var author = "&amp;author=Robert%20Blash"
+      var srcStr = basePath + imgName + autoLoad + configs + title + author
+      $("#panoframe").attr("src",srcStr);
       
       });
     </script>
