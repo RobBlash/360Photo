@@ -14,9 +14,11 @@
       <p>The params are</p>
     </div>
          
-
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
     <script>
- <!--  
+
       $(document).ready(function() {
 
 
@@ -27,14 +29,9 @@
               }
         return urlparameter;
 }
-       
-        
-        var myvar = getUrlParam('text','Empty');
-        
-        -->
-        
-    $(document).ready(function() {
-      var myvar = "Test text";
+               
+      var myvar = getUrlParam('text','Empty');
+  
       var $heading = $('<h1>' + myvar + '</h1>');
       $('div').append($heading);
       
