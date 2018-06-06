@@ -10,23 +10,30 @@
 
   </head>
   <body>
-    <div class="container">
-      <iframe id="panoframe" width="900" height="600" allowfullscreen="" style="border-style:none;"></iframe>
+    <div class="site-container">
+
+      <div class="frame-container">
+        <iframe  class="frame" id="panoframe"  allowfullscreen="" style="border-style:none;"></iframe>
+
+      </div>
+
     </div>
-    
+
     <script
   src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    
+
     <script>
     $(document).ready(function() {
-              function getUrlVars() {
+        <!-- get query values from URL based on parameters-->
+        function getUrlVars() {
             var vars = {};
             var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
                 vars[key] = value;
             });
             return vars;
-        }        
-        
+        }
+
+        <!--call getUrlVars to get value for parameter -->
         function getUrlParam(parameter, defaultvalue){
           var urlparameter = defaultvalue;
           if(window.location.href.indexOf(parameter) > -1){
@@ -34,21 +41,21 @@
             }
           return urlparameter;
         }
-        
+
       <!--var myvar = getUrlParam('text','Empty');-->
-      
+
       var basePath = "./resources/pannellum/pannellum.htm?panorama=../images/"
       var imgName = getUrlParam('image','Empty')
       var autoLoad = "&autoLoad=true"
       var configs = "&config=nocompass.json"
       var title = getUrlParam('title','')
       var author = "&author=Robert Blash"
-      
+
       var srcStr = basePath + imgName + autoLoad + configs + "&title=" + title + author
       $("#panoframe").attr("src",srcStr);
-      
+
       });
     </script>
- 
+
   </body>
 </html>

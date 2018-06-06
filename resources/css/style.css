@@ -1,4 +1,57 @@
-/*Shared Layout*/
+
+
+html, body {
+  height:100%;
+}
+
+
+.site-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*Explicit*/
+
+.frame {
+  width: 100%;
+  height: 100vh;
+}
+
+/*Flexbox
+
+.frame-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.frame {
+  flex-grow: 1;
+}
+*/
+
+
+/*Ratio Padding
+.frame-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 66%;
+}
+
+.frame {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+*/
+
+
+
+
+/*Unused*/
 
 .block {
   display: block;
@@ -46,38 +99,3 @@
 .items-ctr {
   align-items: center;
 }
-
-.container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-
-
-
-/*Shared Text*/
-.bold {
-  font-weight: bold;
-}
-
-.em {
-  font-style: italic;
-}
-
-/*Header*/
-
-
-/*Header Responsive*/
-
-
-/*Main Content*/
-
-
-/*Main Content Responsive*/
-
-
-/*Footer*/
-
-
-/*Footer Responsive*/
