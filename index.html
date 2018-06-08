@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" >
@@ -7,55 +8,23 @@
     <link rel="stylesheet" href="./resources/pannellum/pannellum.css"/>
     <script type="text/javascript" src="./resources/pannellum/pannellum.js"></script>
     <title>Testing 360</title>
-
   </head>
+
   <body>
+
     <div class="site-container">
-
       <div class="frame-container">
-        <iframe  class="frame" id="panoframe"  allowfullscreen="" style="border-style:none;"></iframe>
-
+        <!--iframe for pannellum.html source is set by script below-->
+        <iframe  class="frame" id="pannellum-frame"  allowfullscreen="" style="border-style:none;"></iframe>
       </div>
-
     </div>
 
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!--load jquery from jquery cdn-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
-    <script>
-    $(document).ready(function() {
-        <!-- get query values from URL based on parameters-->
-        function getUrlVars() {
-            var vars = {};
-            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-                vars[key] = value;
-            });
-            return vars;
-        }
-
-        <!--call getUrlVars to get value for parameter -->
-        function getUrlParam(parameter, defaultvalue){
-          var urlparameter = defaultvalue;
-          if(window.location.href.indexOf(parameter) > -1){
-            urlparameter = getUrlVars()[parameter];
-            }
-          return urlparameter;
-        }
-
-      <!--var myvar = getUrlParam('text','Empty');-->
-
-      var basePath = "./resources/pannellum/pannellum.htm?panorama=../images/"
-      var imgName = getUrlParam('image','Empty')
-      var autoLoad = "&autoLoad=true"
-      var configs = "&config=nocompass.json"
-      var title = getUrlParam('title','')
-      var author = "&author=Robert Blash"
-
-      var srcStr = basePath + imgName + autoLoad + configs + "&title=" + title + author
-      $("#panoframe").attr("src",srcStr);
-
-      });
-    </script>
+    <!--call script to get parameters from URL query values, then populate source attribute of iframe-->
+    <script src="./resources/js/pannellumsource.js"></script>
 
   </body>
+
 </html>
