@@ -38,4 +38,5 @@ $(document).ready(function() {
   //use jquery to push source attribute to iframe
   $("#pannellum-frame").attr("src",srcStr);
 
+
   });
